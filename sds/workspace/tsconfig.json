@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "..",
+    "paths": {
+      "data": ["./src/data/index.ts"],
+      "data/*": ["./src/data/*"],
+      "compositions": ["./src/ui/compositions/index.ts"],
+      "compositions/*": ["./src/ui/compositions/*"],
+      "hooks": ["./src/ui/hooks/index.ts"],
+      "hooks/*": ["./src/ui/hooks/*"],
+      "icons": ["./src/ui/icons/index.ts"],
+      "icons/*": ["./src/ui/icons/*"],
+      "images": ["./src/ui/images/index.ts"],
+      "images/*": ["./src/ui/images/*"],
+      "layout": ["./src/ui/layout/index.ts"],
+      "layout/*": ["./src/ui/layout/*"],
+      "primitives": ["./src/ui/primitives/index.ts"],
+      "primitives/*": ["./src/ui/primitives/*"],
+      "utils": ["./src/ui/utils/index.ts"],
+      "utils/*": ["./src/ui/utils/*"]
+    }
+  },
+  "include": [
+    "./**/*",
+    "../src/**/*"
+  ]
+}

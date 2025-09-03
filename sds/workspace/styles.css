@@ -1,0 +1,141 @@
+/* Import all component styles */
+@import "../src/ui/layout/Section/section.css";
+@import "../src/ui/layout/Flex/flex.css";
+@import "../src/ui/primitives/Button/button.css";
+@import "../src/ui/primitives/Text/text.css";
+@import "../src/ui/primitives/Navigation/navigation.css";
+@import "../src/ui/compositions/Cards/cards.css";
+@import "../src/ui/compositions/Headers/headers.css";
+@import "../src/ui/primitives/Accordion/accordion.css";
+@import "../src/ui/primitives/Logo/logo.css";
+@import "../src/ui/primitives/Avatar/avatar.css";
+@import "../src/ui/primitives/Link/link.css";
+@import "../src/ui/primitives/IconButton/iconButton.css";
+@import "../src/ui/primitives/Menu/menu.css";
+@import "../src/ui/primitives/Dialog/dialog.css";
+@import "../src/ui/primitives/Image/image.css";
+@import "../src/ui/primitives/ListBox/listBox.css";
+
+/* Pricing Page Specific Styles */
+.pricing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pricing Cards Grid Layout */
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pricing Card Customization */
+.pricing-cards-grid .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-cards-grid .button-group {
+  margin-top: auto;
+}
+
+/* Make buttons full width in cards */
+.pricing-cards-grid .button {
+  width: 100%;
+}
+
+/* Header Navigation Pills - Figma Design Match */
+.header .navigation {
+  display: inline-flex;
+  gap: var(--sds-size-space-200);
+}
+
+/* General Navigation Pills Container - Figma default is 8px gap */
+.navigation {
+  display: inline-flex;
+  gap: var(--sds-size-space-200);
+}
+
+/* FAQ Section Layout */
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Footer Layout */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sds-size-space-800);
+  justify-content: center;
+}
+
+/* Footer First Column - SNS Icons Override */
+footer .flex-minor:first-child .text-link-list {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sds-size-space-400);
+  margin-top: var(--sds-size-space-600);
+}
+
+footer .flex-minor:first-child .text-link-list .text-list-item {
+  display: flex;
+}
+
+/* Hide text and show only icons for social links */
+footer .flex-minor:first-child .text-link-list .text-link {
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+footer .flex-minor:first-child .text-link-list .text-link[href*="x.com"]:before,
+footer .flex-minor:first-child .text-link-list .text-link[href*="twitter"]:before {
+  content: "𝕏";
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .flex-minor:first-child .text-link-list .text-link[href*="instagram"]:before {
+  content: "📷";
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .flex-minor:first-child .text-link-list .text-link[href*="youtube"]:before {
+  content: "▶️";
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .flex-minor:first-child .text-link-list .text-link[href*="linkedin"]:before {
+  content: "💼";
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
